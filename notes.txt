@@ -1,0 +1,132 @@
+1) Installing globally = npm i packageName -globally
+2) As a dependency: npm i packageName
+3) As a devDependency: npm i packageName -D
+
+
+Event Loop -> Event loop allows nodejs to perform non-blocking I/O operations, despite JS being a single threaded language.
+                (https://www.youtube.com/watch?v=PNa9OMajw9w)
+
+Global Variables:
+// GLOBALS  - NO WINDOW !!!!
+
+// __dirname  - path to current directory
+// __filename - file name
+// require    - function to use modules (CommonJS)
+// module     - info about current module (file)
+// process    - info about env where the program is being executed
+
+Async pattern - Blocking Code
+Async Pattern - Setup Promises 
+Async Pattern - Refactor to Async
+Event emitter - What is Event emitter?  -- > Event emitter is a module that helps in communicating with node objects, just like events that we trigger in a browser environment.
+
+Steps to create a server in NodeJS using HTTP Module:
+1) Import or require HTTP Module
+2) Create a server and within that create routes.
+3) Start the server
+
+Event emitter - Code.
+
+
+====================================================
+TCP AND UDP Protocols
+
+Streams: 
+
+1) Writeable -> Used to write data sequentially
+2) Readable -> Used to read data sequentially
+3) Duplex -> Used to do both of the above
+4) Transform -> Modifying data when reading or writing
+
+Stream breaks a file into pieces of smaller files each with default size of around 65kb
+
+
+
+
+// ================ EXPRESS ====================== //
+
+
+API vs SSR 
+
+API => Application Programming Interface
+        - JSON
+        - Send the 'Data'
+        - res.json()
+
+SSR => Server Side Rendering
+        - Template
+        - Send the 'Template'
+        - res.render()
+
+
+Params and Queries 
+
+Params: Params means parameters
+        Used to dynamically access items through APIs
+
+
+
+================================ MIDDLEWARE ================================
+app.get('/',middleware, (req, res) => {
+=== some actions with req and res ===
+
+next()
+})
+
+
+Middleware takes in the req and performes certain actions on it and the gives out the response.
+
+app.use => Mounts the specified middleware function or functions at the specified path: the middleware function is executed when the base of the requested path matches path.
+
+
+Middleware:
+ 1. Manually Created ---- Done
+ 2. Express ---- Done
+ 3. Third Party middleware
+
+JWT -> JSON WEB TOKEN
+
+
+Express Router:
+
+The express.Router() function is used to create a new router object. This function is used when you want to create a new router object in your program to handle requests. Multiple requests can be easily differentiated with the help of the Router() function in Express.js.
+
+
+DRY -> Don't Repeat Yourself
+
+
+===========
+
+1st feb - Middleware
+2nd and 3rd - Method
+
+for the next week
+1 project: Task manager
+2 project : Contacts Manager
+
+============================= Mongo and Mongoose =============================
+
+There are 2 types of database: SQL and NoSQL
+1) Structured Query language -> PostgreSQL 
+        Rigid
+
+2) No SQL --> Non Relations -> Mongodb or dynomodb 
+
+        Store the data in the following way:
+         1) Column oriented
+         2) Key-value stores
+         3) Document Stores 
+         4) Graphs Database
+
+        Dynamic
+
+IBM Difference between SQL and NoSQL: https://www.ibm.com/cloud/blog/sql-vs-nosql#:~:text=These%20databases%20are%20commonly%20called,row%20transactions%20or%20unstructured%20data.
+
+
+
+Setting up a Mongo DB server: 
+
+1) Create a cloud db with Mongo Atlas
+2) Connecting the db using nodejs and Mongoose middleware 
+3) Create Models (schema) from our data using Mongoose 
+4) Expose the apis created to perform our db operations.
